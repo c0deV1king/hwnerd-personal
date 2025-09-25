@@ -38,35 +38,26 @@
     // Model loading
     let modelGroup: THREE.Group;
     const wireframeMaterial = new THREE.MeshBasicMaterial({
-      color: 0x991b1b,
+      color: 0xca8a04,
       emissive: 0x330000,
       wireframe: false,
     });
 
-    const solidMaterial = new THREE.MeshBasicMaterial({
-      color: 0xf2f2f2,
-      opacity: 0.5,
-      transparent: true,
-    });
+    const fog = new THREE.Fog(0xf9f9f9, 0.1, 5);
+    scene.fog = fog;
 
     // @ts-ignore
-    new GLTFLoader().load("/models/Sci-Fi_ElecBike.glb", (gltf: any) => {
+    new GLTFLoader().load("/models/controller.glb", (gltf: any) => {
       let model: THREE.Group;
       model = gltf.scene;
-
-      const solidModel = model.clone();
 
       model.traverse((child: THREE.Object3D) => {
         if (child.isMesh) child.material = wireframeMaterial;
       });
 
-      solidModel.traverse((child: THREE.Object3D) => {
-        if (child.isMesh) child.material = solidMaterial;
-      });
-
       modelGroup = new THREE.Group();
-      modelGroup.add(solidModel);
       modelGroup.add(model);
+      modelGroup.rotateZ(Math.PI / 2);
 
       scene.add(modelGroup);
     });
