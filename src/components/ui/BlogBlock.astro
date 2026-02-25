@@ -7,8 +7,11 @@ export interface Props {
 }
 const { title, tags, date, slug } = Astro.props;
 ---
+
 <div class="flex items-center flex-col">
-  <h3 class="text-xl text-black font-semibold hover:text-red-800 cursor-pointer"><a href=`/blog/${slug}`> {title} </a></h3>
-  <p class="text-yellow-600">{tags}</p>
-  <p class="text-gray-400 text-sm">{date}</p>
+  <h3 class="text-xl font-semibold hover:text-red-800 cursor-pointer">
+    <a href=`/blog/${slug}`> {title} </a>
+  </h3>
+  <p>{tags}</p>
+  <p class="text-sm">{date}</p>
 </div>

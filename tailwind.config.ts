@@ -2,6 +2,9 @@ export default {
   content: ["./index.html", "./src/**/*.{astro,html,js,jsx,ts,tsx}"],
   theme: {
     extend: {
+      colors: {
+        olive22: "#dbf4ad",
+      },
       fontFamily: {
         mono: ["JetBrains Mono", "Fira Code", "Courier New", "monospace"],
         display: ["Orbitron", "Exo 2", "sans-serif"],
@@ -27,7 +30,5 @@ export default {
       },
     },
   },
-  plugins: [
-    require("@tailwindcss/typography")
-  ],
+  plugins: [require("@tailwindcss/typography")],
 };

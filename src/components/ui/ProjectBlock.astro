@@ -26,17 +26,17 @@ import SteamTrackerBackendScene from "../scenes/SteamTrackerBackendScene.astro";
       </div>
     </div>
     <div class="flex flex-col ml-4 flex-1 min-w-0">
-      <h3 class="text-md font-normal break-words text-red-800 bg-clip-text">
+      <h3 class="text-md font-normal break-words bg-clip-text">
         {title}
       </h3>
-      <p class="text-black break-words leading-relaxed font-extralight text-sm">
+      <p class="break-words leading-relaxed font-extralight text-sm">
         {description}
       </p>
       <div class="mt-2 flex flex-col md:flex-row">
-        <ul class="flex flex-row flex-wrap gap-2 text-xs text-black">
+        <ul class="flex flex-row flex-wrap gap-2 text-xs">
           {
-            technologies.map((tech) => (
-              <li class="list-none bg-black rounded-full px-1 text-white w-fit shadow-sm">
+            technologies.map((tech: any) => (
+              <li class="list-none rounded-full px-1 w-fit shadow-lg">
                 {tech}
               </li>
             ))
@@ -46,13 +46,13 @@ import SteamTrackerBackendScene from "../scenes/SteamTrackerBackendScene.astro";
       <div class="mt-2 flex flex-row gap-2">
         <a
           href={repo}
-          class="text-black bg-transparent px-1 py-1 border border-black rounded-full hover:text-yellow-600 transition-colors duration-300 hover:border-yellow-600"
+          class="bg-transparent px-1 py-1 border border-black rounded-full hover:text-yellow-600 transition-colors duration-300 hover:border-yellow-600"
           target="_blank"
           rel="noopener noreferrer">Repo</a
         >
         <a
           href={live}
-          class="text-black bg-transparent px-1 py-1 border border-black rounded-full hover:text-yellow-600 transition-colors duration-300 hover:border-yellow-600"
+          class="bg-transparent px-1 py-1 border border-black rounded-full hover:text-yellow-600 transition-colors duration-300 hover:border-yellow-600"
           target="_blank"
           rel="noopener noreferrer">Live Link</a
         >
