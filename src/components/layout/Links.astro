@@ -1,0 +1,20 @@
+---
+import { links } from "../../data/links";
+---
+
+<div class="flex justify-center mt-1 mb-8">
+  <div class="flex flex-col p-0 w-[100%] sm:w-[50%]">
+    <h2 class="text-2xl font-bold italic self-center sm:self-start">links</h2>
+    <ul class="space-y-4 self-start">
+      {
+        links.map((link) => (
+          <li>
+            {link.title}
+            <a href={link.link}>{link.link}</a>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</div>
+<div class="w-[50%] bg-black h-0.5 flex self-center"></div>

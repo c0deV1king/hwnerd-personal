@@ -14,11 +14,10 @@ html {
 }
 
 :root {
-  --color-retro-sand: #d8c99b;
-  --color-amber-red: #a4243b;
-  --color-amber-orange: #d8973c;
-  --color-amber-brown: #bd632f;
-  --color-light-blacked: #273e47;
+  --color-deep-forest-green: #A47251;
+  --color-forest-green: #DD9E59;
+  --color-forest-floor-brown: #F0D8A1;
+  --color-sandy: #DCF0C3;
 }
 
 body {
@@ -26,21 +25,28 @@ body {
   padding: 0;
   font-family: "Ubuntu Sans Mono", monospace;
   /* background: linear-gradient(135deg, #111827 0%, #1F2937 50%, #111827 100%); */
-  background-color: var(--color-retro-sand);
-  color: var(--color-light-blacked);
+  background-color: var(--color-deep-forest-green);
+  color: var(--color-forest-floor-brown);
   background-attachment: fixed;
   overflow-x: hidden;
 }
 
 p {
-  color: var(--color-light-blacked);
+  color: var(--color-forest-floor-brown);
+}
+a {
+  color: var(--color-sandy);
+  text-decoration: none;
+}
+a:hover {
+  color: var(--color-forest-green);
 }
 h3 {
-  color: var(--color-amber-red);
+  color: var(--color-forest-floor-brown);
 }
 
 li {
-  color: var(--color-amber-brown);
+  color: var(--color-forest-floor-brown);
 }
 /* Custom scrollbar */
 ::-webkit-scrollbar {

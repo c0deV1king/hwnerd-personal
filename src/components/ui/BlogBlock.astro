@@ -1,17 +1,15 @@
 ---
 export interface Props {
   title: string;
-  tags: string;
   date: string;
   slug: string;
 }
-const { title, tags, date, slug } = Astro.props;
+const { title, date, slug } = Astro.props;
 ---
 
-<div class="flex items-center flex-col">
-  <h3 class="text-xl font-semibold hover:text-red-800 cursor-pointer">
+<div class="flex items-start flex-col sm:flex-row gap-4">
+  <h3 class="text-xl font-semibold cursor-pointer">
     <a href=`/blog/${slug}`> {title} </a>
   </h3>
-  <p>{tags}</p>
-  <p class="text-sm">{date}</p>
+  <p class="text-sm text-center">{date}</p>
 </div>

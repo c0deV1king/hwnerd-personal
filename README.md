@@ -1,1 +1,1 @@
-Welcome to my personal portfolio made with astro
+Welcome to my personal site made with astro
