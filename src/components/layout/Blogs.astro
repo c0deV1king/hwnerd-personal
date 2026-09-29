@@ -5,15 +5,13 @@ import BlogBlock from "../ui/BlogBlock.astro";
 
 <div class="flex justify-center mt-1 mb-8">
   <div class="flex flex-col p-0 w-[100%] sm:w-[50%]">
-    <h1 class="text-5xl self-center sm:self-center mb-2 mt-2">things i want to talk about</h1>
+    <h1 class="text-5xl self-center sm:self-center mb-2 mt-2">
+      things i want to talk about
+    </h1>
     <ul class="space-y-4 self-center">
       {
         blogs.map((blog) => (
-          <BlogBlock
-            title={blog.title}
-            date={blog.date}
-            slug={blog.slug}
-          />
+          <BlogBlock title={blog.title} date={blog.date} slug={blog.slug} />
         ))
       }
     </ul>

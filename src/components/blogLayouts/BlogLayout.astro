@@ -2,6 +2,7 @@
 const { frontmatter } = Astro.props;
 const { title, date, tags } = frontmatter;
 import "../../styles/global.css";
+import Footer from "../../components/layout/Footer.astro";
 ---
 
 <!doctype html>
@@ -14,17 +15,20 @@ import "../../styles/global.css";
   </head>
   <body>
     <article class="mx-auto my-8">
-      <header class="flex justify-center items-center mb-10">
+      <header class="flex justify-start items-center mb-10 ml-10">
+        <img
+          src="/hwnerd-logo-export.svg"
+          alt="HWNERD logo"
+          class="w-36 h-auto mr-4"
+        />
         <a href="/">← return</a>
       </header>
       <main class="flex flex-col items-center mx-2">
         <div class="flex flex-col justify-center w-full sm:w-1/2">
-          <div
-            class="text-3xl font-medium self-center sm:self-start"
-          >
+          <div class="text-3xl font-medium self-center sm:self-start">
             {title}
           </div>
-          <div class=" self-center sm:self-start">{date}</div>
+          <div class="self-center sm:self-start">{date}</div>
           <div class="mb-8 self-center sm:self-start">
             {
               tags &&
@@ -36,10 +40,11 @@ import "../../styles/global.css";
             }
           </div>
           <div class="prose prose-lg">
-          <slot />
+            <slot />
           </div>
         </div>
       </main>
+      <Footer />
     </article>
   </body>
 </html>
