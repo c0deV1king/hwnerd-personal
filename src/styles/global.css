@@ -4,8 +4,8 @@
 @plugin "@tailwindcss/typography";
 
 @font-face {
-  font-family: 'Malevolent';
-  src: url('/fonts/MalevolentFreeRegular-q2o61.otf') format('opentype');
+  font-family: "Malevolent";
+  src: url("/fonts/MalevolentFreeRegular-q2o61.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
 }
@@ -16,11 +16,11 @@
   font-style: normal;
 }
 
-
 html {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 .prose {
@@ -28,10 +28,10 @@ html {
 }
 
 :root {
-  --color-deep-forest-green: #553B08;
-  --color-forest-green: #553B08;
-  --color-forest-floor-brown: #553B08;
-  --color-sandy: #553B08;
+  --color-deep-forest-green: #553b08;
+  --color-forest-green: #553b08;
+  --color-forest-floor-brown: #553b08;
+  --color-sandy: #553b08;
 }
 
 body {
@@ -39,7 +39,7 @@ body {
   padding: 0;
   font-family: "Modern Antiqua", serif;
   /* background: linear-gradient(135deg, #111827 0%, #1F2937 50%, #111827 100%); */
-  background-color: #E9E5CD;
+  background-color: #e9e5cd;
   color: var(--color-forest-floor-brown);
   background-attachment: fixed;
   overflow-x: hidden;
@@ -57,8 +57,8 @@ a:hover {
   color: var(--color-forest-green);
 }
 h3 {
-    color: var(--color-forest-floor-brown);
-    font-family: "Malevolent", sans-serif;
+  color: var(--color-forest-floor-brown);
+  font-family: "Malevolent", sans-serif;
 }
 h1 {
   color: var(--color-forest-floor-brown);
